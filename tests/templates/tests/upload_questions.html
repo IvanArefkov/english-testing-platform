@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<section class="contact_section long_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <label for="" class="p-3">{{field.label}}: </label>
+                            {{field}}
+                        {% endfor %}
+                        <div class="btn_box">
+                            <button type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

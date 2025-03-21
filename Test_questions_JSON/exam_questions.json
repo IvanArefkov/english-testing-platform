@@ -1,0 +1,682 @@
+[
+    {
+        "id": 93,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "intermediate",
+        "question_text": "Should governments regulate social media platforms?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Consider freedom of speech and misinformation concerns.",
+        "explanation": "Regulation may protect users but can also limit expression."
+    },
+    {
+        "id": 51,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "advanced",
+        "sentence_template": "She {blank} a book every evening before bed.",
+        "correct_answer": [
+            "reads"
+        ],
+        "hint": "Use the correct verb in present simple.",
+        "explanation": "Since it's a habit, 'reads' is used."
+    },
+    {
+        "id": 103,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "advanced",
+        "question_text": "Should governments regulate social media platforms?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Consider freedom of speech and misinformation concerns.",
+        "explanation": "Regulation may protect users but can also limit expression."
+    },
+    {
+        "id": 3,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "advanced",
+        "passage": "The Great Wall of China was originally built to protect Chinese states from invasions and raids.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of Wall"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about Wall and its impact."
+    },
+    {
+        "id": 5,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "advanced",
+        "passage": "Recycling helps reduce waste in landfills and conserves natural resources by reusing materials.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of reduce"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about reduce and its impact."
+    },
+    {
+        "id": 12,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "intermediate",
+        "sentence_template": "If we {blank} earlier, we wouldn't have missed the train.",
+        "correct_answer": [
+            "had left"
+        ],
+        "hint": "Past perfect for unreal past conditions.",
+        "explanation": "A third conditional sentence requires 'had left'."
+    },
+    {
+        "id": 60,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "advanced",
+        "question_text": "Discuss the role of education in shaping a successful career.",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Include arguments for both traditional and non-traditional education paths.",
+        "explanation": "Education provides essential knowledge, but practical experience is also key."
+    },
+    {
+        "id": 1,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "intermediate",
+        "passage": "The invention of the printing press by Johannes Gutenberg in the 15th century revolutionized the way information was spread.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of of"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about of and its impact."
+    },
+    {
+        "id": 59,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "intermediate",
+        "question_text": "How does urbanization affect the environment?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Mention both positive and negative impacts.",
+        "explanation": "Urbanization can lead to economic growth but also pollution and habitat destruction."
+    },
+    {
+        "id": 4,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "beginner",
+        "passage": "Electric cars are becoming increasingly popular as an environmentally friendly alternative to gasoline-powered vehicles.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of are"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about are and its impact."
+    },
+    {
+        "id": 8,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "intermediate",
+        "sentence_template": "John {blank} to the meeting yesterday.",
+        "correct_answer": [
+            "went"
+        ],
+        "hint": "Use the past simple form.",
+        "explanation": "The verb 'went' is the correct past form of 'go'."
+    },
+    {
+        "id": 3,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "advanced",
+        "passage": "The Great Wall of China was originally built to protect Chinese states from invasions and raids.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of Wall"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about Wall and its impact."
+    },
+    {
+        "id": 10,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "beginner",
+        "sentence_template": "I {blank} him since last summer.",
+        "correct_answer": [
+            "haven't seen"
+        ],
+        "hint": "Use present perfect for an action that continues.",
+        "explanation": "The present perfect 'haven't seen' applies to ongoing situations."
+    },
+    {
+        "id": 25,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "intermediate",
+        "sentence_template": "I {blank} him since last summer.",
+        "correct_answer": [
+            "haven't seen"
+        ],
+        "hint": "Use present perfect for an action that continues.",
+        "explanation": "The present perfect 'haven't seen' applies to ongoing situations."
+    },
+    {
+        "id": 3,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "advanced",
+        "passage": "The Great Wall of China was originally built to protect Chinese states from invasions and raids.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of Wall"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about Wall and its impact."
+    },
+    {
+        "id": 76,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "intermediate",
+        "question_text": "Explain how space exploration benefits humanity.",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Discuss technological advances and scientific discoveries.",
+        "explanation": "Space exploration has led to many innovations in medicine, technology, and transportation."
+    },
+    {
+        "id": 55,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "beginner",
+        "sentence_template": "I {blank} him since last summer.",
+        "correct_answer": [
+            "haven't seen"
+        ],
+        "hint": "Use present perfect for an action that continues.",
+        "explanation": "The present perfect 'haven't seen' applies to ongoing situations."
+    },
+    {
+        "id": 49,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "beginner",
+        "sentence_template": "They {blank} their project by next Friday.",
+        "correct_answer": [
+            "will complete"
+        ],
+        "hint": "Use future tense.",
+        "explanation": "'Will complete' is the correct future simple form."
+    },
+    {
+        "id": 75,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "advanced",
+        "question_text": "Discuss the role of education in shaping a successful career.",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Include arguments for both traditional and non-traditional education paths.",
+        "explanation": "Education provides essential knowledge, but practical experience is also key."
+    },
+    {
+        "id": 56,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "advanced",
+        "question_text": "Explain how space exploration benefits humanity.",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Discuss technological advances and scientific discoveries.",
+        "explanation": "Space exploration has led to many innovations in medicine, technology, and transportation."
+    },
+    {
+        "id": 2,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "intermediate",
+        "passage": "Many scientists believe that Mars once had liquid water, which raises the possibility that it may have supported life.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of believe"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about believe and its impact."
+    },
+    {
+        "id": 53,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "intermediate",
+        "sentence_template": "John {blank} to the meeting yesterday.",
+        "correct_answer": [
+            "went"
+        ],
+        "hint": "Use the past simple form.",
+        "explanation": "The verb 'went' is the correct past form of 'go'."
+    },
+    {
+        "id": 18,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "beginner",
+        "sentence_template": "John {blank} to the meeting yesterday.",
+        "correct_answer": [
+            "went"
+        ],
+        "hint": "Use the past simple form.",
+        "explanation": "The verb 'went' is the correct past form of 'go'."
+    },
+    {
+        "id": 3,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "advanced",
+        "passage": "The Great Wall of China was originally built to protect Chinese states from invasions and raids.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of Wall"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about Wall and its impact."
+    },
+    {
+        "id": 5,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "advanced",
+        "passage": "Recycling helps reduce waste in landfills and conserves natural resources by reusing materials.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of reduce"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about reduce and its impact."
+    },
+    {
+        "id": 22,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "beginner",
+        "sentence_template": "If we {blank} earlier, we wouldn't have missed the train.",
+        "correct_answer": [
+            "had left"
+        ],
+        "hint": "Past perfect for unreal past conditions.",
+        "explanation": "A third conditional sentence requires 'had left'."
+    },
+    {
+        "id": 3,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "advanced",
+        "passage": "The Great Wall of China was originally built to protect Chinese states from invasions and raids.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of Wall"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about Wall and its impact."
+    },
+    {
+        "id": 87,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "intermediate",
+        "question_text": "What are the advantages and disadvantages of using AI in everyday life?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Include examples from different industries.",
+        "explanation": "AI improves efficiency but can replace jobs and raise ethical concerns."
+    },
+    {
+        "id": 14,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "advanced",
+        "sentence_template": "They {blank} their project by next Friday.",
+        "correct_answer": [
+            "will complete"
+        ],
+        "hint": "Use future tense.",
+        "explanation": "'Will complete' is the correct future simple form."
+    },
+    {
+        "id": 88,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "intermediate",
+        "question_text": "Should governments regulate social media platforms?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Consider freedom of speech and misinformation concerns.",
+        "explanation": "Regulation may protect users but can also limit expression."
+    },
+    {
+        "id": 15,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "advanced",
+        "sentence_template": "I {blank} him since last summer.",
+        "correct_answer": [
+            "haven't seen"
+        ],
+        "hint": "Use present perfect for an action that continues.",
+        "explanation": "The present perfect 'haven't seen' applies to ongoing situations."
+    },
+    {
+        "id": 1,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "intermediate",
+        "passage": "The invention of the printing press by Johannes Gutenberg in the 15th century revolutionized the way information was spread.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of of"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about of and its impact."
+    },
+    {
+        "id": 50,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "advanced",
+        "sentence_template": "I {blank} him since last summer.",
+        "correct_answer": [
+            "haven't seen"
+        ],
+        "hint": "Use present perfect for an action that continues.",
+        "explanation": "The present perfect 'haven't seen' applies to ongoing situations."
+    },
+    {
+        "id": 27,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "intermediate",
+        "sentence_template": "If we {blank} earlier, we wouldn't have missed the train.",
+        "correct_answer": [
+            "had left"
+        ],
+        "hint": "Past perfect for unreal past conditions.",
+        "explanation": "A third conditional sentence requires 'had left'."
+    },
+    {
+        "id": 77,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "intermediate",
+        "question_text": "What are the advantages and disadvantages of using AI in everyday life?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Include examples from different industries.",
+        "explanation": "AI improves efficiency but can replace jobs and raise ethical concerns."
+    },
+    {
+        "id": 67,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "advanced",
+        "question_text": "What are the advantages and disadvantages of using AI in everyday life?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Include examples from different industries.",
+        "explanation": "AI improves efficiency but can replace jobs and raise ethical concerns."
+    },
+    {
+        "id": 2,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "intermediate",
+        "passage": "Many scientists believe that Mars once had liquid water, which raises the possibility that it may have supported life.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of believe"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about believe and its impact."
+    },
+    {
+        "id": 57,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "intermediate",
+        "question_text": "What are the advantages and disadvantages of using AI in everyday life?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Include examples from different industries.",
+        "explanation": "AI improves efficiency but can replace jobs and raise ethical concerns."
+    },
+    {
+        "id": 1,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "intermediate",
+        "passage": "The invention of the printing press by Johannes Gutenberg in the 15th century revolutionized the way information was spread.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of of"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about of and its impact."
+    },
+    {
+        "id": 2,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "intermediate",
+        "passage": "Many scientists believe that Mars once had liquid water, which raises the possibility that it may have supported life.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of believe"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about believe and its impact."
+    },
+    {
+        "id": 7,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "advanced",
+        "sentence_template": "If we {blank} earlier, we wouldn't have missed the train.",
+        "correct_answer": [
+            "had left"
+        ],
+        "hint": "Past perfect for unreal past conditions.",
+        "explanation": "A third conditional sentence requires 'had left'."
+    },
+    {
+        "id": 61,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "advanced",
+        "question_text": "Explain how space exploration benefits humanity.",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Discuss technological advances and scientific discoveries.",
+        "explanation": "Space exploration has led to many innovations in medicine, technology, and transportation."
+    },
+    {
+        "id": 4,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "beginner",
+        "passage": "Electric cars are becoming increasingly popular as an environmentally friendly alternative to gasoline-powered vehicles.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of are"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about are and its impact."
+    },
+    {
+        "id": 65,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "advanced",
+        "question_text": "Discuss the role of education in shaping a successful career.",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Include arguments for both traditional and non-traditional education paths.",
+        "explanation": "Education provides essential knowledge, but practical experience is also key."
+    },
+    {
+        "id": 19,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "intermediate",
+        "sentence_template": "They {blank} their project by next Friday.",
+        "correct_answer": [
+            "will complete"
+        ],
+        "hint": "Use future tense.",
+        "explanation": "'Will complete' is the correct future simple form."
+    },
+    {
+        "id": 11,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "intermediate",
+        "sentence_template": "She {blank} a book every evening before bed.",
+        "correct_answer": [
+            "reads"
+        ],
+        "hint": "Use the correct verb in present simple.",
+        "explanation": "Since it's a habit, 'reads' is used."
+    },
+    {
+        "id": 97,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "advanced",
+        "question_text": "What are the advantages and disadvantages of using AI in everyday life?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Include examples from different industries.",
+        "explanation": "AI improves efficiency but can replace jobs and raise ethical concerns."
+    },
+    {
+        "id": 37,
+        "category": "grammar",
+        "type": "fill_in_blank",
+        "difficulty": "advanced",
+        "sentence_template": "If we {blank} earlier, we wouldn't have missed the train.",
+        "correct_answer": [
+            "had left"
+        ],
+        "hint": "Past perfect for unreal past conditions.",
+        "explanation": "A third conditional sentence requires 'had left'."
+    },
+    {
+        "id": 2,
+        "category": "reading",
+        "type": "multiple_choice",
+        "difficulty": "intermediate",
+        "passage": "Many scientists believe that Mars once had liquid water, which raises the possibility that it may have supported life.",
+        "question_text": "What is the primary focus of the passage?",
+        "correct_answer": [
+            "The importance of believe"
+        ],
+        "incorrect_answer": [
+            "An unrelated historical event.",
+            "The effects of climate change.",
+            "The development of modern cities."
+        ],
+        "explanation": "The passage highlights key facts about believe and its impact."
+    },
+    {
+        "id": 58,
+        "category": "writing",
+        "type": "essay_prompt",
+        "difficulty": "advanced",
+        "question_text": "Should governments regulate social media platforms?",
+        "correct_answer": [
+            "N/A"
+        ],
+        "hint": "Consider freedom of speech and misinformation concerns.",
+        "explanation": "Regulation may protect users but can also limit expression."
+    }
+]

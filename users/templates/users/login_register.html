@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="contact_section long_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            {% if page == 'login' %}
+            <div class="heading_container">
+              <h2>
+                Login
+              </h2>
+            </div>
+            <form action="" method="POST">
+            {% csrf_token %}
+              <div>
+                <input type="text" placeholder="Username" name="username" />
+              </div>
+              <div>
+                <input type="password" placeholder="Password" name="password" />
+              </div>
+              <div class="btn_box">
+                <button type="submit">
+                  LOGIN
+                </button>
+              </div>
+            </form>
+            {% else %}
+            <div class="heading_container">
+                <h2>
+                  Sign-Up
+                </h2>
+            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                {{field}}
+                {% endfor %}
+                <div class="btn_box">
+                    <button type="submit">
+                      REGISTER
+                    </button>
+                </div>
+            </form>
+                {% csrf_token %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}

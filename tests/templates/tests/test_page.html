@@ -1,0 +1,97 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+
+
+<div class="container pt-5" id="app">
+  <!--Results screen-->
+  <div v-if="finish_test" class="container">
+    <!-- <button @click="finishTest()" class="btn btn-primary">Finish the Test ></button> -->
+    <div class="card" id="test-form">
+    <h5 class="card-header"> Test is done</h5>
+    <div class="card-body">
+      <b> Test results:</b>
+      <ul>
+        <li v-for="answer in storedAnswers">
+          Question #[[answer.id]] 
+          <span>Your answer: [[answer.answer]]</span>
+          <p> Correct answer: <span v-for="ca in answer.correct_answer">[[ca]]</span></p>
+        </li>
+      </ul>    
+    </div>
+  </div>
+</div>
+    <!--Main test screen-->
+  <div v-else class="container"> 
+    <div class="d-flex justify-content-end">
+    <h3>Time: <b>[[ formattedTime ]]</b></h3>
+    </div>
+  <div class="card" id="test-form">
+    <h5 class="card-header">Question # <b>[[question_number]]</b></h5>
+    <div class="card-body">
+      <h6 class="card-title"><b>Category:</b> [[currentQuestion.fields.category || 'Loading' ]]</h6>
+      <p class="pt-3"><b>Type:</b> [[currentQuestion.fields?.question_type || 'Loading' ]]</p>
+      <hr>
+      <p>Question text:</p>
+      <p v-if="currentQuestion.fields?.question_type === 'multiple_choice' || currentQuestion.fields?.question_type === 'essay_prompt'  ">
+        [[currentQuestion.fields.question_text || 'Loading' ]]
+      </p>
+      <p v-else-if="currentQuestion.fields?.question_type === 'fill_in_blank' ">
+        [[currentQuestion.fields.sentence_template || 'Loading' ]]
+      </p>
+      <p>
+        [[currentQuestion.fields.passage || 'Loading' ]]
+      </p>
+      <br />
+      <!--Multiple Choice -->
+        <div v-if="currentQuestion.fields.question_type === 'multiple_choice'">
+        <p>Choose your answer:</p>
+      <div  v-for="(answer, index) in currentQuestion.fields.answers" :key="index + question_number" class="form-check">
+            <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            :id="'answer-' + index"
+            :value="answer"
+            v-on:input="selectedAnswer"
+            :checked="selectedAnswer === answer"
+            @change="selectedAnswer = answer"
+            />
+            <label class="form-check-label" :for="'answer-' + index">
+            [[answer  || 'Loading' ]]
+            </label>
+      </div>
+        </div>
+    <!--end of Multiple Choice-->
+
+    <!--Fill in blank-->
+    <div v-if="currentQuestion.fields.question_type === 'fill_in_blank'">
+        <div class="mb-3">
+            <input 
+            type="text" 
+            class="form-control" 
+            id="exampleFormControlInput1" 
+            placeholder="Type your answer here"
+            v-model="selectedAnswer"
+            >
+          </div>
+    </div>
+    <!--end of Fill in blank-->
+    <div v-if="currentQuestion.fields.question_type === 'essay_prompt'">
+    <label for="exampleFormControlTextarea1" class="form-label">Essay prompt</label>
+    <textarea 
+    class="form-control" 
+    id="exampleFormControlTextarea1" 
+    rows="3"
+    v-model="selectedAnswer"
+    ></textarea>
+    </div>
+      <br>
+      <div class="d-flex justify-content-end">
+        <button @click="previousQuestion()" :disabled="question_number === 1" class="btn btn-secondary me-3">< Previous</button>
+        <button @click="nextQuestion()" class="btn btn-primary">Next ></button>
+      </div >
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

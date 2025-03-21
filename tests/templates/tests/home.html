@@ -1,0 +1,91 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+<section class="blog_section layout_padding">
+  <div class="container text-center">
+    <div class="heading_container">
+      <h2>Test Modes</h2>
+    </div>
+    <div class="row">
+      <!-- Mode 1 -->
+      <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="box">
+          <div class="detail-box">
+            <h5>Exam mode</h5>
+            <p>
+              Simulate a real exam environment with a strict time limit. No
+              explanations—just you, the questions, and the clock. Perfect for
+              assessing your readiness under pressure.
+            </p>
+            <a href="{% url 'test_welcome' %}?mode=Exam">Start</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mode 2 -->
+      <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="box">
+          <div class="detail-box">
+            <h5>Practice Mode</h5>
+            <p>
+              Take your time and get immediate feedback on each answer.
+              Explanations are provided after every question, helping you
+              understand mistakes and improve.
+            </p>
+            <a href="{% url 'test_welcome' %}?mode=Practice">Start</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mode 3 -->
+      <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="box">
+          <div class="detail-box">
+            <h5>Reading Mode</h5>
+            <p>
+              Practice comprehension questions that test your ability to analyze
+              and understand written passages.
+            </p>
+            <a href="{% url 'test_welcome' %}?mode=Reading">Start</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mode 4 -->
+      <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="box">
+          <div class="detail-box">
+            <h5>Grammar Mode</h5>
+            <p>
+              Tackle grammar-based questions that test your understanding of
+              sentence structure, word forms, and syntax.
+            </p>
+            <a href="{% url 'test_welcome' %}?mode=Grammar">Start</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mode 5 -->
+      <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="box">
+          <div class="detail-box">
+            <h5>Writing Mode</h5>
+            <p>
+              Practice structuring responses, improving clarity, and refining
+              arguments in written form.
+            </p>
+            <a href="{% url 'test_welcome' %}?mode=Writing">Start</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mode 6 -->
+      <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="box">
+          <div class="detail-box">
+            <h5>Vocabulary Mode</h5>
+            <p>
+              Test your understanding of word meanings, synonyms, antonyms, and
+              contextual usage.
+            </p>
+            <a href="{% url 'test_welcome' %}?mode=Vocabulary">Start</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

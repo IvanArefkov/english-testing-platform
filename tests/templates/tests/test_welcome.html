@@ -1,0 +1,83 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<section class="about_section layout_padding ">
+    <div class="container">
+        <div class="detail-box">
+        <div class="heading_container">
+            <h2>🏆 Welcome to the {{mode}} Mode!</h2>
+            <br/>
+            {% if mode == 'Exam' %} 
+
+            <p>Test Your Skills Under Real Exam Conditions!</p>
+            <ul>
+                <li>This is a timed test. You must complete all questions within the given time limit.</li>
+                <li>No explanations will be provided during the test.</li>
+                <li>Once an answer is submitted, you cannot go back to change it.</li>
+                <li>Your final score will be revealed at the end.</li>
+            </ul>
+            <p><b>Goal:</b> Simulate a real exam environment and measure your performance.</p>
+
+            {% elif mode == 'Practice' %}
+
+            <p>Learn and Improve at Your Own Pace!</p>
+            <ul>
+                <li>This mode is not timed, so take as long as you need.</li>
+                <li>After each answer, you’ll receive an explanation to help you understand the correct choice.</li>
+                <li>You can retry questions to reinforce learning.</li>
+            </ul>
+            <p><b>Goal:</b> Build confidence, learn from mistakes, and strengthen your understanding.</p>
+            <p><b>Tip:</b> Use this mode to prepare before taking the full exam mode.</p>
+            
+            {% elif mode == 'Reading' %}
+
+            <p>Sharpen Your Reading Comprehension!</p>
+            <ul>
+                <li>Read a passage carefully and answer multiple-choice questions based on it.</li>
+                <li>Some questions may ask about main ideas, details, inferences, or vocabulary in context.</li>
+                <li>This mode helps improve your ability to analyze written content.</li>
+            </ul>
+            <p><b>Goal:</b> Strengthen comprehension and critical reading skills.</p>
+
+            {% elif mode == 'Grammar' %}
+
+            <p>Master Grammar Rules & Sentence Structure!</p>
+            <ul>
+                <li>Answer grammar-focused questions testing syntax, word forms, sentence structure, and correctness.</li>
+                <li>Some questions may require identifying errors or choosing the best phrasing.</li>
+                <li>This mode is essential for improving writing accuracy.</li>
+            </ul>
+            <p><b>Goal:</b> Strengthen grammar knowledge and eliminate common mistakes.</p>
+
+            {% elif mode == 'Writing' %}
+
+            <p>Develop Strong Writing & Composition Skills!</p>
+            <ul>
+                <li>You’ll be given essay-style or structured writing questions.</li>
+                <li>Responses will be evaluated based on clarity, grammar, structure, and argument development.</li>
+                <li>Some questions may require short responses, while others involve longer written pieces.</li>
+            </ul>
+            <p><b>Goal:</b> Improve essay writing, idea organization, and clear communication.</p>
+        
+            {% elif mode == 'Vocabulary' %}
+
+            <p>Expand Your Word Knowledge!</p>
+            <ul>
+                <li>Answer multiple-choice questions related to word meanings, synonyms, antonyms, and word usage in context.</li>
+                <li>Some questions may include fill-in-the-blank exercises.</li>
+                <li>This mode is key for improving both reading and writing skills.</li>
+            </ul>
+            <p><b>Goal:</b> Strengthen vocabulary for better comprehension and expression.</p>
+
+            {% endif %}
+            <p>Ready? Press ‘Start’ to begin your test!</p>
+            
+            <a href="{% url 'test_page' mode %}">Start</a>
+            <br>
+            <div class="col-3"><a href="{% url 'home' %}">Back</a>
+            
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}
