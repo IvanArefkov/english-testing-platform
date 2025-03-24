@@ -1,3 +1,5 @@
+const mountEl = document.getElementById('app')
+if (mountEl){
 
 const app = Vue.createApp({
     delimiters: ["[[", "]]"],
@@ -17,7 +19,6 @@ const app = Vue.createApp({
     async created() {
         try {
             const response = await axios.get('http://127.0.0.1:8000/tests/get_test_questions/');
-            console.log(response.data)
             this.questions = response.data;
             this.loading = false;
             //Loading local data if the test wasn't finished or page reloaded
@@ -28,7 +29,6 @@ const app = Vue.createApp({
               this.storedAnswers = data.answers || []
               this.timeLeft = data.time_left || 3600
             }
-            console.log(this.questions.length);
         } catch (error) {
             console.error ('Error fetching questions:',error);
         }
@@ -59,7 +59,7 @@ const app = Vue.createApp({
                 this.storedAnswers[index] = {
                   id: this.question_number,
                   answer: this.selectedAnswer,
-                  correct_answer: this.questions[this.question_number].fields.correct_answer
+                  correct_answer: this.questions[this.question_number -1].fields.correct_answer
                 };
               } else {
                 // ✅ Add new answer
@@ -69,8 +69,6 @@ const app = Vue.createApp({
                   correct_answer: this.questions[this.question_number -1].fields.correct_answer
                 });
               }
-      
-              console.log("Stored Answers:", this.storedAnswers);
               this.selectedAnswer = null; // Reset for next question
             }
           },
@@ -90,13 +88,10 @@ const app = Vue.createApp({
                 this.storeAnswer();
                 this.question_number++;
                 this.saveState();
-                console.log(this.question_number,this.questions.length);
                 this.restoreAnswer();
             } else {
-                console.log (this.question_number, this.questions.length)
                 this.storeAnswer();
                 this.finishTest()
-                console.log("You are on the last question.");
             }
         },
         previousQuestion() {
@@ -104,10 +99,7 @@ const app = Vue.createApp({
             if (this.question_number > 1) {
                 this.question_number--;
                 this.restoreAnswer();
-
-            } else {
-                console.log("You are on the first question.");
-            }
+            } else {}
         },
         // restore the previously selected answer and display it back to the screen
         restoreAnswer() {
@@ -120,7 +112,6 @@ const app = Vue.createApp({
           this.saveState()
           this.finish_test = true
           this.clearState()
-          console.log(this.storedAnswers)
           alert('The test is now finished')
         },
         // to store progress on local storage
@@ -139,8 +130,9 @@ const app = Vue.createApp({
         //check if the answer is correct
         checkAnswer(answer){
           if (answer.correct_answer){
-          if (Object.values(answer.correct_answer).includes(answer.answer)){ return 'correct'} else {return 'incorrect'}
-        } else {return 'N/A'} 
+            if (Object.values(answer.correct_answer).includes("N/A")){ return 'Your essay answer will be reviewed by an admin shortly'}
+            else if (Object.values(answer.correct_answer).includes(answer.answer)){ return 'correct'} else {return 'incorrect'}
+        } else {return 'Error while checking your answer'} 
       },
         
     },
@@ -152,4 +144,7 @@ const app = Vue.createApp({
       },
 });
 
-app.mount('#app');
+try {app.mount('#app')
+}
+catch (error) {console.error ('Waiting for the test screen:',error);}
+}

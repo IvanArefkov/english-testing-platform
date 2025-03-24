@@ -37,10 +37,8 @@ def test_welcome(request):
 @login_required(login_url='login')
 def test_page(request,mode):
     user = request.user.profile
-    question_set = get_questions(request,mode)
     context = {
         'mode': mode,
-        'question_set': question_set,
     }
     return render(request,'tests/test_page.html',context)
 

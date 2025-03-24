@@ -15,57 +15,30 @@ def validate_upload_questions(request, questions_file):
             highest_id = Question.objects.aggregate(Max('question_id'))['question_id__max'] or 0
             for item in json_data:
                 highest_id = highest_id + 1
-                if item['type'] == 'multiple_choice':
-                    multiple_choice_question(item, highest_id)
-                elif item['type'] == 'fill_in_blank':
-                    fill_in_blank(item, highest_id)
-                elif item['type'] == 'essay_prompt':
-                    essay_prompt_question(item, highest_id)
+                create_questions(item, highest_id)
             messages.success(request, 'The file is uploaded successfully')
         except json.JSONDecodeError:
             messages.error(request, 'Invalid JSON')
 
-def multiple_choice_question(item,highest_id):
+def create_questions(item,highest_id):
     question = Question.objects.create(
         question_id=highest_id,
         category=item['category'],
-        question_type=item['type'],
+        question_type=item['question_type'],
         difficulty=item['difficulty'],
-        passage=item['passage'],
+        question_prompt=item['question_prompt'],
         question_text=item['question_text'],
         correct_answer=item['correct_answer'],
         answers=item['answers'],
-        explanation=item['explanation'],
-    )
-    question.save()
-
-def fill_in_blank(item,highest_id):
-    question = Question.objects.create(
-        question_id=highest_id,
-        category=item['category'],
-        question_type=item['type'],
-        difficulty=item['difficulty'],
-        sentence_template=item['sentence_template'],
-        correct_answer=item['correct_answer'],
-        hint=item['hint'],
-        explanation=item['explanation'], )
-    question.save()
-
-def essay_prompt_question(item,highest_id):
-    question = Question.objects.create(
-        question_id=highest_id,
-        category=item['category'],
-        question_type=item['type'],
-        difficulty=item['difficulty'],
-        question_text=item['question_text'],
         hint=item['hint'],
         explanation=item['explanation'],
     )
     question.save()
+
 
 def get_questions(request,mode):
     if mode == 'Exam' or mode == 'Practice':
-        question_set = Question.objects.order_by("?")[:50]
+        question_set = Question.objects.order_by("?")[:10]
     elif mode == 'Reading':
         question_set = Question.objects.filter(category='reading').order_by("?")[:3]
     elif mode == 'Grammar':
