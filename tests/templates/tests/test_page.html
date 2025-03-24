@@ -11,9 +11,14 @@
       <b> Test results:</b>
       <ul>
         <li v-for="answer in storedAnswers">
-          Question #[[answer.id]] 
+          <b>Question #[[answer.id]] - </b>
+          
+          <span>[[checkAnswer(answer)]]</span>
+          <br> 
           <span>Your answer: [[answer.answer]]</span>
-          <p> Correct answer: <span v-for="ca in answer.correct_answer">[[ca]]</span></p>
+          <p> Correct answer: 
+            <span v-for="ca in answer.correct_answer">[[ca]]</span>
+          </p>
         </li>
       </ul>    
     </div>

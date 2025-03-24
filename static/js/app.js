@@ -7,9 +7,11 @@ const app = Vue.createApp({
             questions: [],
             loading: true,
             timeLeft: 3600,
+            interval: null,
             selectedAnswer: null,
             storedAnswers:[],
             finish_test: false,
+            progress:{}, // to store progress on local storage
         };
     },
     async created() {
@@ -18,6 +20,14 @@ const app = Vue.createApp({
             console.log(response.data)
             this.questions = response.data;
             this.loading = false;
+            //Loading local data if the test wasn't finished or page reloaded
+            const saved = localStorage.getItem('test_progress')
+            if (saved){
+              const data = JSON.parse(saved)
+              this.question_number = data.question_number || 1
+              this.storedAnswers = data.answers || []
+              this.timeLeft = data.time_left || 3600
+            }
             console.log(this.questions.length);
         } catch (error) {
             console.error ('Error fetching questions:',error);
@@ -34,9 +44,10 @@ const app = Vue.createApp({
         },
         endOftest() {
           return this.question_number === this.questions.length
-        }
+        },
       },
     methods: {
+        // stores the answer for use in the result page
         storeAnswer() {
             if (this.selectedAnswer !== null) {
               let index = this.storedAnswers.findIndex(
@@ -64,10 +75,13 @@ const app = Vue.createApp({
             }
           },
         countDown(){
-            if(this.timeLeft<1){
-                alert('The time is out')
-                this.timeLeft=0
-            }else{this.timeLeft--}
+            this.interval = setInterval(() => {
+              if (this.timeLeft >0) {this.timeLeft--}
+              else{
+                clearInterval(this.interval)
+                this.finishTest()
+              }
+            },1000)
             
         },
         nextQuestion() {
@@ -75,6 +89,7 @@ const app = Vue.createApp({
             if (this.question_number < this.questions.length) {
                 this.storeAnswer();
                 this.question_number++;
+                this.saveState();
                 console.log(this.question_number,this.questions.length);
                 this.restoreAnswer();
             } else {
@@ -94,22 +109,45 @@ const app = Vue.createApp({
                 console.log("You are on the first question.");
             }
         },
+        // restore the previously selected answer and display it back to the screen
         restoreAnswer() {
             let found = this.storedAnswers.find(
                 item => item.id === this.question_number
               );
               this.selectedAnswer = found ? found.answer : null; // Restore if found, else reset
-            },
+        },
         finishTest() {
+          this.saveState()
           this.finish_test = true
+          this.clearState()
           console.log(this.storedAnswers)
-        }
+          alert('The test is now finished')
+        },
+        // to store progress on local storage
+        saveState(){
+          this.progress = {
+            time_left: this.timeLeft,
+            question_number: this.question_number,
+            answers: this.storedAnswers,
+            }
+          localStorage.setItem('test_progress',JSON.stringify(this.progress))
+        }, 
+        // clear local storage once the test is complete
+        clearState(){
+          localStorage.removeItem('test_progress')
+        },
+        //check if the answer is correct
+        checkAnswer(answer){
+          if (answer.correct_answer){
+          if (Object.values(answer.correct_answer).includes(answer.answer)){ return 'correct'} else {return 'incorrect'}
+        } else {return 'N/A'} 
+      },
         
     },
     mounted() {
-        this.interval = setInterval(this.countDown, 1000); // Run every second
+        this.countDown()
       },
-      beforeUnmount() {
+    beforeUnmount() {
         clearInterval(this.interval); // Clean up when component is destroyed
       },
 });
