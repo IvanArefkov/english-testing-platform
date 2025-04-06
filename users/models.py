@@ -16,6 +16,7 @@ class Profile(models.Model):
         ('intermediate', 'intermediate'),
         ('advanced', 'advanced'),
     )
+    image = models.ImageField(blank=True,null=True, default='default.jpg')
     skill_level = models.CharField(max_length=200, choices=SKILL_LEVELS, blank=True,null=True)
     profile_image = models.ImageField(blank=True,null=True,upload_to='profiles/',default='profiles/user-default.png')
     created = models.DateTimeField(auto_now_add=True)

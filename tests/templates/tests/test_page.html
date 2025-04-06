@@ -1,12 +1,25 @@
 {% extends 'main.html' %} {% load static %} {% block content %}
 
-
+<!--App section-->
 <div class="container pt-5" id="app">
+  <!-- Modal -->
+  <div v-if="resetContinue" class="container">
+     <div class="card" id="test-form">
+     <h5 class="card-header">Saved session found</h5>
+     <div class="card-body">
+       <p>We found an unfinished session. Would you like to resume or to start a new test?</p>  
+       <div class="d-flex justify-content-end mb-3">
+        <button @click="resetTest" class="btn btn-secondary me-2">Reset</button>
+        <button @click="continueTest" class="btn btn-primary">Continue</button>
+      </div>
+     </div>
+   </div>
+ </div>
   <!--Results screen-->
-  <div v-if="finish_test" class="container results">
+  <div v-else-if="finish_test" class="container results">
    <div class="d-flex justify-content-end mb-3">
     <a class="btn btn-primary" href="{% url 'home' %}">
-      Main page </a>
+      Finish Test </a>
   </div>
     <div class="card" id="test-form">
     <h5 class="card-header"> Test Results</h5>
@@ -17,7 +30,7 @@
 
           <span>[[checkAnswer(answer)]]</span></p>
           <br/> 
-          <p>Question text: [[questions[index].fields.question_text]]</p>
+          <p>Question text: [[questions[index].question_text]]</p>
           <p>Your answer: [[answer.answer]]</p>
           <p> Correct answer: 
             <span v-for="ca in answer.correct_answer">[[ca]]</span>
@@ -27,10 +40,7 @@
       </ul>    
     </div>
   </div>
-
-
 </div>
-
 
 <!--Main test screen-->
 
@@ -44,20 +54,19 @@
   <div class="card" id="test-form">
     <h5 class="card-header">Question # <b>[[question_number]]</b></h5>
     <div class="card-body">
-      <h6 class="card-title"><b>Category:</b> [[currentQuestion.fields.category || 'Loading' ]]</h6>
-      <p class="pt-3"><b>Type:</b> [[currentQuestion.fields?.question_type || 'Loading' ]]</p>
+      <h6 class="card-title"><b>Category:</b> [[currentQuestion.category || 'Loading' ]]</h6>
+      <p class="pt-3"><b>Type:</b> [[currentQuestion?.question_type || 'Loading' ]]</p>
       <hr>
       <b>Question text: </b>
       <p>
-        [[currentQuestion.fields.question_prompt || 'Loading' ]]
+        [[currentQuestion.question_prompt || 'Loading' ]]
       </p>
       <p>
-        [[currentQuestion.fields.question_text || 'Loading' ]]
+        [[currentQuestion.question_text || 'Loading' ]]
       </p>
-      
       <hr>
 <!--essay prompt-->
-        <div v-if="currentQuestion.fields.question_type === 'essay_prompt'">
+        <div v-if="currentQuestion.question_type === 'essay_prompt'">
           <label for="exampleFormControlTextarea1" class="form-label">Essay prompt</label>
           <textarea 
           class="form-control" 
@@ -68,10 +77,10 @@
         </div>
 <!--end of essay prompt-->
 <!--Multiple Choice -->
-        <div v-else="currentQuestion.fields.question_type === 'multiple_choice'">
+        <div v-else="currentQuestion.question_type === 'multiple_choice'">
           <p>Choose your answer:</p>
 
-          <div  v-for="(answer, index) in currentQuestion.fields.answers" :key="index + question_number" class="form-check">
+          <div  v-for="(answer, index) in currentQuestion.answers" :key="index + question_number" class="form-check">
                 <input
                 class="form-check-input"
                 type="radio"
@@ -84,11 +93,9 @@
                 <label class="form-check-label" :for="'answer-' + index">
                 [[answer  || 'Loading' ]]
                 </label>
-          </div>
-
+              </div>
         </div>
 <!--end of Multiple Choice-->
-
       <br>
       <div class="d-flex justify-content-end">
         <button @click="previousQuestion()" :disabled="question_number === 1" class="btn btn-secondary me-3">< Previous</button>
@@ -98,5 +105,4 @@
   </div>
 </div>
 </div>
-
 {% endblock %}

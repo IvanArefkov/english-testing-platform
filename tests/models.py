@@ -1,4 +1,5 @@
 from django.db import models
+from users.models import Profile
 
 # Create your models here.
 class Question(models.Model):
@@ -27,3 +28,16 @@ class Question(models.Model):
 
     class Meta:
         ordering = ['question_id']
+
+class TestResult(models.Model):
+    result_id = models.IntegerField(unique=True, primary_key=True, editable=False)
+    owner = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    test_category = models.CharField(max_length=200, blank=True, null=True)
+    score = models.FloatField(blank=True, null=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "#" + str(self.result_id)
+    class Meta:
+        ordering = ['result_id']
+

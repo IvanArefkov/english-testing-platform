@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
@@ -61,5 +62,10 @@ def logoutPage(request):
     logout(request)
     messages.warning(request, 'You have been logged out.')
     return redirect('login')
+
+@login_required(login_url='login')
+def profile(request):
+
+    return render(request, 'users/profile.html')
 
 

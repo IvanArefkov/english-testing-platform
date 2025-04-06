@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="container " id="profile">
+    <h1 class="pt-5 pb-3"><b>Profile</b></h1>
+    <div class="row mb-5">
+        <div class="col-4">
+            
+        </div>
+        <div class="col-8">
+            <h2>{{request.user.profile.name | lower | title }} {{request.user.profile.last_name | lower | title}}</h2>
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-4">
+
+        </div>
+        <div class="col-8">
+            <p><b>Email:</b> {{ request.user.profile.email }}</p>
+            <p><b>Username:</b> {{request.user.profile.username}}</p>
+            <p><b>Location:</b> {% if request.user.profile.location == None %}
+                no location selected
+                {% else %}
+                {{request.user.profile.location}}
+                {% endif %}
+            </p>
+        </div>
+    </div>
+    <div class="d-grid justify-content-start">
+        <button class="btn btn-outline-secondary mb-2">Edit Profile</button>
+        <button class="btn btn-outline-danger">Remove Profile</button>
+    </div>
+    <hr>
+    <div class="row pt-3">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                  Latest Test Results
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Latest test: Exam</h5>
+                  <p class="card-text">Exam Results:</p>
+                  <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-8">
+            <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">View Previous Test</button>
+              </div>
+        </div>
+    </div>
+    
+</div>
+
+
+{% endblock %}
