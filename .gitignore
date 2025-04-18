@@ -1,0 +1,6 @@
+#ignore referance files
+/HTML\ Template
+#ignore resources folder
+/RECOURSES
+/.idea
+/.env
