@@ -25,7 +25,7 @@ const app = Vue.createApp({
         sendResults(){
           this.getCSRF()
           const mode = new URLSearchParams(window.location.search).get('mode');
-          axios.post(`http://127.0.0.1:8000/api/save_test_results/?mode=${mode}`,this.storedAnswers,{
+          axios.post(`/api/save_test_results/?mode=${mode}`,this.storedAnswers,{
             headers:{
             'X-CSRFToken': this.csrfToken,
             'Content-Type': 'application/json'
@@ -163,7 +163,7 @@ const app = Vue.createApp({
               }
             
           else {
-            const response = await axios.get('http://127.0.0.1:8000/api/get_test_questions/');
+            const response = await axios.get('/api/get_test_questions/');
             this.questions = response.data
             this.loading = false
           }

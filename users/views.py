@@ -57,7 +57,7 @@ def register(request):
         'form': form,
     }
     return render(request,'users/login_register.html', context)
-
+@login_required(login_url='login')
 def logoutPage(request):
     logout(request)
     messages.warning(request, 'You have been logged out.')
