@@ -10,23 +10,29 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os.path
-import os
+import os, dotenv
 from pathlib import Path
+
+dotenv.load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-current_ip = str(os.getenv("MY_IP"))
+
+# Environment Variables
+MY_IP = str(os.getenv("MY_IP"))
+DEBUG_STATUS = bool(os.getenv("DEBUG"))
+VUE_SCRIPT_SRC = str(os.getenv("VUE_SCRIPT_SRC"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = DEBUG_STATUS
 
-ALLOWED_HOSTS = ['ivanarefkov.com','www.ivanarefkov.com','127.0.0.1','localhost', current_ip]
+ALLOWED_HOSTS = ['ivanarefkov.com','www.ivanarefkov.com', MY_IP]
 
 # Application definition
 
@@ -38,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'tests.apps.TestsConfig',
+    'context_processor.apps.ContextProcessorConfig',
     'django.contrib.admin',
     'rest_framework'
 
@@ -67,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'context_processor.vue.vue_script_src'
             ],
         },
     },
